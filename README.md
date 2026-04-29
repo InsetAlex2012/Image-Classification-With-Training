@@ -93,4 +93,4 @@ It allows you to create your own image classes, train a model inside the app, an
 
 ## 👤 Author
 
-Your Name Here
+AlexIsNotInset
