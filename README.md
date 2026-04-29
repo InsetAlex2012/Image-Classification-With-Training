@@ -1,88 +1,86 @@
-# AI Image Classifier (Tkinter + PyTorch)
+# 🖼️ AI Image Classifier (PyTorch + Tkinter)
 
-## Overview
-A desktop GUI application for image classification using PyTorch and a modern Tkinter interface.  
-It supports ImageNet-based classification and is structured for future extension into custom training and folder-based datasets.
+(!screenshot)
+
+A graphical AI Image Classifier built with Python, PyTorch, and Tkinter.  
+It supports ImageNet-based prediction as well as custom training on user-defined image classes.
 
 ---
 
-## Features
+## ✨ Features
 
-### Core System
-- Built with PyTorch + torchvision
-- Uses pretrained model backbone (ImageNet-ready)
-- Designed for both single-image and folder-based classification
-- Modular structure for adding custom training features
+### 🧠 AI Functionality
+- Uses pretrained ResNet-18 backbone (ImageNet-ready)
+- Custom classifier head for user-defined training
+- Feature extraction-based training (fast + lightweight)
+- Confidence-based prediction output (%)
+- Supports multiple image classes with local dataset folders
 
-### Image Handling
-- Supports common image formats:
-  - JPG / JPEG
-  - PNG
-  - BMP
-  - GIF
-  - WEBP / SVG (file selection support)
-- Automatic loading via file browser or folder selection
+### 🏋️ Training System
+- Add custom classes via GUI
+- Train directly inside the application
+- Automatic dataset loading from folders
+- Saves trained model locally (custom_head.pth)
+- Persistent class mapping (custom_classes.json)
 
-### GUI
-- Tkinter-based modern interface
-- ttk themed layout system
+### 🖼️ Image Support
+- JPG / JPEG
+- PNG
+- BMP
+- GIF
+- Automatic preprocessing (resize + normalization)
+- Batch folder processing support
+
+### 🧩 Graphical User Interface (GUI)
+- Built with Tkinter + ttk
+- Modern dark-themed interface
 - Image preview panel
-- Activity log window
-- Clean two-column layout (preview + controls)
-
-### Architecture
-- Separated UI and logic structure
-- Designed for threading support (future-safe for model inference/training)
-- Extensible classifier pipeline placeholder
+- Activity log console (live updates)
+- Prediction display (class + confidence %)
+- Folder selector + file browser
+- Training control panel (add / remove / train)
 
 ---
 
-## Requirements
+## 🛠 Technologies Used
 
-Install dependencies:
-pip install torch torchvision pillow
-
----
-
-## How to Run
-
-Run the application with:
-python main.py
+- Python 3
+- PyTorch
+- torchvision
+- PIL (Pillow)
+- Tkinter / ttk
+- threading
+- json / os / pathlib
 
 ---
 
-## How to Use
+## ▶️ How to Run
 
-### 1. Load an Image
-- Click "Browse"
-- Select an image file
-
-### 2. (Planned Feature)
-- Single-image classification button (currently prepared in UI)
-
-### 3. Folder Mode (UI Ready)
-- Choose a folder for batch processing (logic not yet enabled in this version)
+1. Make sure Python 3 is installed  
+2. Install dependencies: pip install torch torchvision pillow  
+3. Run the program: python main.py  
 
 ---
 
-## Project Structure
+## 📂 Required Files
 
-main.py            Main application file  
-images/            Default image folder  
-(custom future)    Model weights / classifier extensions  
-
----
-
-## Notes
-- This version is a UI + pipeline foundation
-- Classification logic is prepared for extension but not fully activated in this build
-- Designed to be extended into:
-  - Custom training system
-  - Batch inference
-  - Live prediction updates
+- main.py  
+- custom_classes/ (auto-created for datasets)  
+- custom_classes.json (auto-generated)  
+- custom_head.pth (created after training)  
+- images/ (optional default folder)
 
 ---
 
-## Author
+## ⚠️ Notes
 
-Your Name Here
+- First run loads pretrained backbone automatically  
+- At least 2 classes are required before training  
+- Model quality depends on dataset size and variation  
+- Designed for learning and experimentation with CNN pipelines  
+
+---
+
+## 👤 Author
+
+AlexIsNotInset
