@@ -1,6 +1,6 @@
 # 🖼️ AI Image Classifier (PyTorch + Tkinter)
 
-(!screenshot)
+![Image Classifier with Training](screenshot.png)
 
 A graphical AI Image Classifier built with Python, PyTorch, and Tkinter.  
 It supports ImageNet-based prediction as well as custom training on user-defined image classes.
